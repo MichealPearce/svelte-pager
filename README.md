@@ -3,7 +3,7 @@
 
 # Setup
 ```
-git clone https://github.com/MichealPearce/server-dashboard-client.git
+git clone https://github.com/MichealPearce/svelte-pager.git
 cd svelte-pager
 yarn install
 yarn run dev
