@@ -6,8 +6,8 @@ const {preprocess, createEnv, readConfigFile} = require('svelte-ts-preprocess')
 const mode = process.env.NODE_ENV || 'development'
 const isDev = mode === 'development'
 
-const template = path.resolve(__dirname, 'src/index.html')
-const entry = path.resolve(__dirname, 'src/index.js')
+const template = path.resolve(__dirname, 'testing/index.html')
+const entry = path.resolve(__dirname, isDev ? 'testing/index.js' : 'src/index.js')
 const outDir = path.resolve(__dirname, 'dist')
 
 const targets = ['>1%', 'last 2 versions', 'Firefox ESR', 'not ie < 11']
@@ -110,6 +110,7 @@ module.exports = {
 		]
 	},
 	plugins: [
+		isDev && 
 		new HtmlWebpackPlugin({
 			template,
 			inject: true,
@@ -129,9 +130,9 @@ module.exports = {
 				  }
 		}),
 		!isDev &&
-			new MiniCssExtractPlugin({
-				filename: '[name].[hash:8].css'
-			})
+		new MiniCssExtractPlugin({
+			filename: '[name].[hash:8].css'
+		})
 	].filter(Boolean)
 }
 

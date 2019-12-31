@@ -19,8 +19,10 @@
 		"sass-loader": "7.1.0",
 		"style-loader": "0.23.1",
 		"svelte": "3.4.4",
-        "svelte-loader": "2.13.4",
-        "svelte-preprocess": "^3.3.0",
+		"svelte-loader": "2.13.4",
+		"svelte-preprocess": "^3.3.0",
+		"svelte-ts-preprocess": "1.1.3",
+		"typescript": "^3.4.5",
 		"webpack": "4.32.2",
 		"webpack-cli": "3.3.2",
 		"webpack-dev-server": "3.4.1"

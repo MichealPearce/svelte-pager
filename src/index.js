@@ -1,15 +1,11 @@
-import App from './App.svelte'
+import Link from './Link'
+import Page from './Page'
 
-const target = document.querySelector('main')
+export function pageUpdated(path) {
+	window.dispatchEvent(new CustomEvent('pager-updated', {detail: path}))
+	history.pushState(null, null, path)
+} 
 
-if (!target) {
-	throw new Error('Can not find app container...')
+export {
+	Link, Page
 }
-
-new App({
-	target,
-	anchor: null,
-	props: {},
-	hydrate: false,
-	intro: false,
-})

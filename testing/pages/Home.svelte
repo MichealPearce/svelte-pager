@@ -1,8 +1,8 @@
 <script>
-	import {Link} from 'components/svelte-pager'
+	import {Link} from '../../src'
 </script>
 
-<div transition:fade >
+<div>
 	<h1>Home</h1>
 	<Link to="/about" >
 		To About

@@ -8,7 +8,6 @@
 	function handleClick(event) {
 		event.preventDefault()
 		pageUpdated(href)
-		history.pushState(null, null, href)
 	} 
 
 </script>
